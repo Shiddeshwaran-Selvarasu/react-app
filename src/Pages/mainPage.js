@@ -63,11 +63,14 @@ class MainPage extends React.Component {
 
     const addText = () => {
       setModalVisible();
-      this.setState({
-        size: this.state.displayText.push("🎉 "+text+" 🎉"),
-      });
-      showToastWithGravity('text '+text+'is added');
-      console.log(this.state.displayText);
+      if (text.trim().length < 1) {
+        showToastWithGravity('Empty Text!!!');
+      } else {
+        this.setState({
+          size: this.state.displayText.push('🎉 ' + text + ' 🎉'),
+        });
+        showToastWithGravity('text ' + text + 'is added');
+      }
     };
 
     return (
