@@ -84,6 +84,7 @@ class MainPage extends React.Component {
               titleStyle={AppbarStyle.title}
             />
             <Appbar.Action icon="plus" onPress={changeModalState} />
+            <Appbar.Action icon="plus" onPress={changeModalState} />
           </Appbar.Header>
         </react.View>
         <react.View style={ViewStyle.main}>

@@ -5,12 +5,12 @@ const AppbarStyle = StyleSheet.create({
   main: {
     flex: 0,
     backgroundColor: '#b3ffff',
-    elevation: 24,
+    elevation: 3,
     padding: 5,
   },
 
   content: {
-    alignItems: 'center',
+    paddingLeft: 20,
   },
 
   title: {
