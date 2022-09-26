@@ -8,7 +8,7 @@ const AppbarStyle = StyleSheet.create({
     elevation: 3,
     padding: 5,
   },
-
+  
   content: {
     paddingLeft: 20,
   },

@@ -12,6 +12,17 @@ import ViewStyle from '../style/viewStyle';
 import MiscStyle from '../style/miscStyle';
 
 class MainPage extends React.Component {
+  static navigationOptions = {
+    title: 'Info',
+    headerStyle: {
+      backgroundColor: '#03A9F4',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+  };
+
   constructor() {
     super();
     this.state = {
@@ -61,6 +72,8 @@ class MainPage extends React.Component {
       });
     };
 
+    const moveToInfo = () => this.props.navigation.navigate('Info');
+
     const addText = () => {
       setModalVisible();
       if (text.trim().length < 1) {
@@ -83,8 +96,11 @@ class MainPage extends React.Component {
               style={AppbarStyle.content}
               titleStyle={AppbarStyle.title}
             />
-            <Appbar.Action icon="plus" onPress={changeModalState} />
-            <Appbar.Action icon="plus" onPress={changeModalState} />
+            <Appbar.Action icon="information-outline" onPress={moveToInfo} />
+            <Appbar.Action
+              icon="plus-circle-outline"
+              onPress={changeModalState}
+            />
           </Appbar.Header>
         </react.View>
         <react.View style={ViewStyle.main}>
